@@ -42,9 +42,9 @@
       border-bottom: 1px solid var(--border);
     }
     .brand .dot {
-      width: 36px; height: 36px; border-radius: 10px;
-      background: linear-gradient(180deg, #5fb2ff, #1f88ff);
+      width: 40px; height: 40px; border-radius: 10px;
       box-shadow: 0 6px 16px rgba(31, 136, 255, .35);
+      object-fit: cover; display: block;
     }
     .brand .title { font-weight: 700; font-size: 18px; }
     .brand .sub { color: var(--muted); font-size: 13px; }
@@ -107,7 +107,7 @@
 <body>
   <div class="wrap">
     <header class="brand">
-      <div class="dot" aria-hidden="true"></div>
+      <img class="dot" src="./icon.png" alt="Dohiqo" width="40" height="40" />
       <div>
         <div class="title">Dohiqo</div>
         <div class="sub">Local-first finance tracker · Локальный учёт финансов</div>
@@ -245,8 +245,26 @@
       <details>
         <summary>Куда отправляется моя информация?</summary>
         <p>
-          Никуда. Подробнее о работе с данными — в
+          Ваши <strong>финансовые данные</strong> (операции, счета, фото чеков,
+          геопозиция, теги, комментарии) остаются на устройстве и не отправляются
+          никуда. У Dohiqo нет своих серверов.
+        </p>
+        <p>
+          В приложении показывается рекламный баннер от
+          <strong>Yandex Mobile Ads</strong>. Для его работы рекламная сеть получает
+          обезличенные технические данные устройства (рекламный идентификатор, модель,
+          версия ОС, IP-адрес, события показа/нажатия по рекламе) — финансовая
+          информация ей не передаётся. Подробнее — в
           <a href="./privacy.html#ru">политике конфиденциальности</a>.
+        </p>
+      </details>
+
+      <details>
+        <summary>Можно ли убрать рекламный баннер?</summary>
+        <p>
+          Сейчас баннер показывается всем пользователям и используется, чтобы окупать
+          разработку. Отключение рекламы (премиум-режим) пока не реализовано — следите
+          за обновлениями.
         </p>
       </details>
 
@@ -381,7 +399,25 @@
       <details>
         <summary>Where does my information go?</summary>
         <p>
-          Nowhere. See our <a href="./privacy.html#en">Privacy Policy</a> for details.
+          Your <strong>financial data</strong> (transactions, accounts, receipt photos,
+          geolocation, tags, notes) stays on your device and is never transmitted off it.
+          Dohiqo has no servers.
+        </p>
+        <p>
+          The app displays an advertising banner served by
+          <strong>Yandex Mobile Ads</strong>. For ad delivery, the network receives
+          anonymized device data (advertising identifier, device model, OS version,
+          IP address, ad impression / click events) — your financial information is not
+          shared with it. See the <a href="./privacy.html#en">Privacy Policy</a> for full
+          details.
+        </p>
+      </details>
+
+      <details>
+        <summary>Can I remove the ad banner?</summary>
+        <p>
+          The banner is currently shown to all users to help fund development.
+          A paid ad-free mode is not yet implemented — stay tuned for updates.
         </p>
       </details>
 
