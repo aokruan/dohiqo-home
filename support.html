@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dohiqo — Support / Поддержка</title>
+  <meta name="description" content="Support, contact and FAQ for Dohiqo — a local-first personal finance tracker for Android and iOS." />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #0b1220;
+      --muted: #5b6478;
+      --card: #f5f7fb;
+      --border: #e3e8f1;
+      --brand: #1f88ff;
+      --brand-soft: #e8f1ff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1220;
+        --fg: #e7ecf5;
+        --muted: #98a2b3;
+        --card: #131c30;
+        --border: #1f2a44;
+        --brand: #6aa9ff;
+        --brand-soft: #1a2b4d;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+    header.brand {
+      display: flex; align-items: center; gap: 12px;
+      padding-bottom: 12px; margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand .dot {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: linear-gradient(180deg, #5fb2ff, #1f88ff);
+      box-shadow: 0 6px 16px rgba(31, 136, 255, .35);
+    }
+    .brand .title { font-weight: 700; font-size: 18px; }
+    .brand .sub { color: var(--muted); font-size: 13px; }
+    nav.langs {
+      display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;
+    }
+    nav.langs a {
+      display: inline-block; padding: 6px 12px;
+      border: 1px solid var(--border); border-radius: 999px;
+      color: var(--fg); text-decoration: none; font-size: 14px;
+      background: var(--card);
+    }
+    nav.langs a:hover { border-color: var(--brand); color: var(--brand); }
+    h1 { font-size: 28px; margin: 8px 0 6px; line-height: 1.2; }
+    h2 { font-size: 20px; margin: 28px 0 8px; }
+    h3 { font-size: 16px; margin: 18px 0 6px; }
+    p, ul { margin: 8px 0; }
+    ul { padding-left: 22px; }
+    li { margin: 4px 0; }
+    a { color: var(--brand); }
+    .meta { color: var(--muted); font-size: 14px; }
+    .contact {
+      background: var(--brand-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin: 16px 0 8px;
+      font-size: 15px;
+    }
+    .contact a { font-weight: 600; }
+    .divider {
+      margin: 56px 0 32px;
+      border: 0; height: 1px; background: var(--border);
+    }
+    details {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin: 8px 0;
+    }
+    details > summary {
+      cursor: pointer;
+      font-weight: 600;
+      list-style: none;
+    }
+    details > summary::-webkit-details-marker { display: none; }
+    details > summary::before {
+      content: "›";
+      display: inline-block;
+      margin-right: 8px;
+      transition: transform .15s ease;
+      color: var(--brand);
+    }
+    details[open] > summary::before { transform: rotate(90deg); }
+    code { background: var(--bg); padding: 1px 6px; border-radius: 6px; font-size: 90%; }
+    footer { color: var(--muted); font-size: 13px; margin-top: 48px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="brand">
+      <div class="dot" aria-hidden="true"></div>
+      <div>
+        <div class="title">Dohiqo</div>
+        <div class="sub">Local-first finance tracker · Локальный учёт финансов</div>
+      </div>
+    </header>
+
+    <nav class="langs" aria-label="Language">
+      <a href="#ru">Русский</a>
+      <a href="#en">English</a>
+      <a href="./privacy.html">Privacy / Конфиденциальность</a>
+    </nav>
+
+    <!-- ====================== RU ====================== -->
+    <section id="ru" lang="ru">
+      <h1>Поддержка Dohiqo</h1>
+      <p class="meta">
+        Dohiqo — это простое приложение для учёта личных финансов:
+        вы добавляете расходы, доходы и переводы между счетами, ведёте категории
+        и теги, прикрепляете фото чеков и геопозицию по желанию. Всё хранится
+        локально, без аккаунтов и облака.
+      </p>
+
+      <h2>Связь с разработчиком</h2>
+      <div class="contact">
+        По вопросам поддержки, отчётам об ошибках и предложениям пишите на
+        <a href="mailto:aokruan@gmail.com">aokruan@gmail.com</a>.
+        Постараюсь ответить в течение нескольких дней.
+      </div>
+
+      <h2>Частые вопросы</h2>
+
+      <details>
+        <summary>Нужен ли аккаунт для Dohiqo?</summary>
+        <p>
+          Нет. Приложение не требует регистрации, входа или подключения к интернету.
+          Все данные хранятся локально на вашем устройстве.
+        </p>
+      </details>
+
+      <details>
+        <summary>Работает ли Dohiqo офлайн?</summary>
+        <p>
+          Да, полностью. Приложение не имеет серверной части, и весь функционал
+          (добавление операций, аналитика, экспорт/импорт) доступен без интернета.
+        </p>
+      </details>
+
+      <details>
+        <summary>Как добавить операцию?</summary>
+        <p>
+          На главном экране нажмите кнопку «+» внизу. Выберите тип
+          (расход, доход, перевод), укажите сумму, счёт, категорию и при желании
+          теги, фото или геопозицию, затем «Сохранить».
+        </p>
+      </details>
+
+      <details>
+        <summary>Как сделать резервную копию данных?</summary>
+        <p>
+          Откройте «Настройки» → «Резервная копия». Доступно два варианта экспорта:
+        </p>
+        <ul>
+          <li><strong>JSON</strong> — только данные, без фото. Лёгкий и быстрый.</li>
+          <li><strong>ZIP</strong> — данные плюс фото-вложения. Подходит для полной копии.</li>
+        </ul>
+        <p>
+          Файл создаётся и передаётся в системное окно «Поделиться» — вы решаете,
+          куда его сохранить (Google Drive, iCloud Drive, мессенджер и т.п.).
+        </p>
+      </details>
+
+      <details>
+        <summary>Как импортировать данные обратно?</summary>
+        <p>
+          «Настройки» → «Импорт операций» → выберите JSON или ZIP-архив,
+          ранее экспортированный из Dohiqo. <strong>Важно:</strong> импорт
+          <em>полностью заменяет</em> текущие локальные данные содержимым файла.
+          Если вы хотите сохранить текущее состояние, сначала сделайте экспорт.
+        </p>
+      </details>
+
+      <details>
+        <summary>Где хранятся прикреплённые фото?</summary>
+        <p>
+          В приватной песочнице приложения на вашем устройстве. Фото не появляются
+          в общей фото-библиотеке, не отправляются в облако и не доступны другим
+          приложениям. При экспорте ZIP они включаются в архив; при экспорте JSON — нет.
+        </p>
+      </details>
+
+      <details>
+        <summary>Что произойдёт с данными при переустановке приложения?</summary>
+        <p>
+          При удалении приложения операционная система удалит локальную базу
+          и все вложения. Восстановить их в общем случае невозможно — пользуйтесь
+          функцией экспорта регулярно.
+        </p>
+        <p>
+          На Android, если у вас включено авто-резервирование Google, операции
+          могут восстановиться автоматически, но без фотографий
+          (мы исключаем их из резервной копии, чтобы не перегружать её).
+          На iOS данные восстанавливаются как часть резервной копии iCloud
+          или iTunes, если она у вас есть.
+        </p>
+      </details>
+
+      <details>
+        <summary>Какие валюты поддерживаются?</summary>
+        <p>
+          Любые трёхбуквенные ISO-4217 коды (USD, EUR, RUB, KZT, GBP, JPY, и т.д.).
+          Знаки валют распознаются для большинства распространённых; для остальных
+          отображается ISO-код. Конвертации курсов между валютами не делается — каждая
+          операция хранится в своей валюте.
+        </p>
+      </details>
+
+      <details>
+        <summary>Как сменить язык приложения?</summary>
+        <p>
+          «Настройки» → «Язык». Доступны русский и английский. Изменение применяется
+          сразу. На Android 13+ язык также можно сменить из системных настроек
+          приложения.
+        </p>
+      </details>
+
+      <details>
+        <summary>Как удалить операцию или счёт?</summary>
+        <p>
+          Нажмите на операцию в списке, чтобы открыть её карточку, далее значок
+          «корзина» в правом верхнем углу. Счёт удаляется аналогично на экране
+          «Счета».
+        </p>
+      </details>
+
+      <details>
+        <summary>Куда отправляется моя информация?</summary>
+        <p>
+          Никуда. Подробнее о работе с данными — в
+          <a href="./privacy.html#ru">политике конфиденциальности</a>.
+        </p>
+      </details>
+
+      <h2>Политика конфиденциальности</h2>
+      <p>
+        Ознакомьтесь с нашей политикой конфиденциальности:
+        <a href="./privacy.html#ru">Политика конфиденциальности Dohiqo</a>.
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ====================== EN ====================== -->
+    <section id="en" lang="en">
+      <h1>Dohiqo Support</h1>
+      <p class="meta">
+        Dohiqo is a simple personal finance tracker: you log expenses, income
+        and transfers between accounts, keep categories and tags, and optionally
+        attach receipt photos and geolocation. Everything is stored locally —
+        no accounts, no cloud.
+      </p>
+
+      <h2>Contact support</h2>
+      <div class="contact">
+        For support questions, bug reports, or feedback, contact us by email:
+        <a href="mailto:aokruan@gmail.com">aokruan@gmail.com</a>.
+        I will reply within a few days.
+      </div>
+
+      <h2>Common questions</h2>
+
+      <details>
+        <summary>Does Dohiqo require an account?</summary>
+        <p>
+          No. The app does not require registration, sign-in, or an internet
+          connection. All data is stored locally on your device.
+        </p>
+      </details>
+
+      <details>
+        <summary>Does Dohiqo work offline?</summary>
+        <p>
+          Yes, completely. The app has no backend; all functionality
+          (adding transactions, analytics, export/import) works offline.
+        </p>
+      </details>
+
+      <details>
+        <summary>How do I add a transaction?</summary>
+        <p>
+          On the main screen, tap the "+" button at the bottom. Pick the type
+          (expense, income, or transfer), enter the amount, account, category,
+          and optionally tags, a photo, or geolocation, then tap "Save".
+        </p>
+      </details>
+
+      <details>
+        <summary>How do I back up my data?</summary>
+        <p>Open <em>Settings → Backup</em>. Two export modes are available:</p>
+        <ul>
+          <li><strong>JSON</strong> — data only, no photos. Lightweight and fast.</li>
+          <li><strong>ZIP</strong> — data plus photo attachments. A complete backup.</li>
+        </ul>
+        <p>
+          The file is generated and handed to the system share sheet — you decide
+          where to save it (Google Drive, iCloud Drive, messenger, etc.).
+        </p>
+      </details>
+
+      <details>
+        <summary>How do I restore data?</summary>
+        <p>
+          <em>Settings → Import</em>, then pick the JSON or ZIP file that you
+          previously exported from Dohiqo. <strong>Important:</strong> import
+          <em>fully replaces</em> the current local data with the file contents.
+          If you want to preserve the current state, export it first.
+        </p>
+      </details>
+
+      <details>
+        <summary>Where are attached photos stored?</summary>
+        <p>
+          In the app's private sandbox on your device. Photos are not added to
+          the system photo library, not uploaded to any cloud, and not accessible
+          to other apps. They are included in ZIP exports but not in JSON exports.
+        </p>
+      </details>
+
+      <details>
+        <summary>What happens to my data if I reinstall the app?</summary>
+        <p>
+          When you uninstall the app, the operating system removes the local
+          database and all attachments. There is generally no way to recover them —
+          please use the export feature regularly.
+        </p>
+        <p>
+          On Android, if Google Auto Backup is enabled, transactions may be
+          restored automatically — but without photos (we exclude them from
+          the backup to keep it lightweight). On iOS, data is restored as part
+          of your iCloud or iTunes device backup, if you have one.
+        </p>
+      </details>
+
+      <details>
+        <summary>Which currencies are supported?</summary>
+        <p>
+          Any three-letter ISO 4217 code (USD, EUR, RUB, KZT, GBP, JPY, …).
+          Currency symbols are recognised for most common codes; for others
+          the ISO code is shown. The app does not convert between currencies —
+          each transaction is stored in its own currency.
+        </p>
+      </details>
+
+      <details>
+        <summary>How do I change the language?</summary>
+        <p>
+          <em>Settings → Language</em>. Russian and English are available.
+          The change applies immediately. On Android 13+, you can also change
+          the per-app language from system settings.
+        </p>
+      </details>
+
+      <details>
+        <summary>How do I delete a transaction or an account?</summary>
+        <p>
+          Tap a transaction in the list to open its details, then tap the
+          trash icon in the top-right. Accounts are deleted in a similar
+          way from the "Accounts" screen.
+        </p>
+      </details>
+
+      <details>
+        <summary>Where does my information go?</summary>
+        <p>
+          Nowhere. See our <a href="./privacy.html#en">Privacy Policy</a> for details.
+        </p>
+      </details>
+
+      <h2>Privacy Policy</h2>
+      <p>
+        Read our privacy policy:
+        <a href="./privacy.html#en">Dohiqo Privacy Policy</a>.
+      </p>
+    </section>
+
+    <footer>
+      © 2026 Dohiqo · <a href="./privacy.html">Privacy / Конфиденциальность</a>
+    </footer>
+  </div>
+</body>
+</html>
