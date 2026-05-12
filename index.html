@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dohiqo — Local-first finance tracker</title>
+  <meta name="description" content="Dohiqo — a local-first personal finance tracker for Android and iOS. No account, no cloud." />
+  <style>
+    :root {
+      --bg: #ffffff; --fg: #0b1220; --muted: #5b6478;
+      --card: #f5f7fb; --border: #e3e8f1; --brand: #1f88ff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1220; --fg: #e7ecf5; --muted: #98a2b3;
+        --card: #131c30; --border: #1f2a44; --brand: #6aa9ff;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg); color: var(--fg); line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 56px 20px 64px; text-align: center; }
+    .dot {
+      width: 72px; height: 72px; border-radius: 18px; margin: 0 auto 18px;
+      background: linear-gradient(180deg, #5fb2ff, #1f88ff);
+      box-shadow: 0 12px 28px rgba(31, 136, 255, .35);
+    }
+    h1 { font-size: 36px; margin: 0 0 8px; }
+    .tag { color: var(--muted); font-size: 17px; margin: 0 0 36px; }
+    .links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .links a {
+      display: inline-block; padding: 12px 20px;
+      border: 1px solid var(--border); border-radius: 999px;
+      color: var(--fg); text-decoration: none; font-weight: 600;
+      background: var(--card);
+    }
+    .links a.primary { background: var(--brand); color: white; border-color: var(--brand); }
+    .links a:hover { border-color: var(--brand); color: var(--brand); }
+    .links a.primary:hover { color: white; opacity: .9; }
+    footer { color: var(--muted); font-size: 13px; margin-top: 56px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="dot" aria-hidden="true"></div>
+    <h1>Dohiqo</h1>
+    <p class="tag">
+      Local-first personal finance tracker for Android and iOS.<br />
+      Локальный учёт личных финансов для Android и iOS.
+    </p>
+    <div class="links">
+      <a href="./privacy.html" class="primary">Privacy Policy / Политика</a>
+      <a href="./support.html">Support / Поддержка</a>
+    </div>
+    <footer>
+      © 2026 Dohiqo · <a href="mailto:aokruan@gmail.com">aokruan@gmail.com</a>
+    </footer>
+  </div>
+</body>
+</html>
