@@ -25,9 +25,9 @@
     }
     .wrap { max-width: 720px; margin: 0 auto; padding: 56px 20px 64px; text-align: center; }
     .dot {
-      width: 72px; height: 72px; border-radius: 18px; margin: 0 auto 18px;
-      background: linear-gradient(180deg, #5fb2ff, #1f88ff);
+      width: 96px; height: 96px; border-radius: 22px; margin: 0 auto 18px;
       box-shadow: 0 12px 28px rgba(31, 136, 255, .35);
+      object-fit: cover; display: block;
     }
     h1 { font-size: 36px; margin: 0 0 8px; }
     .tag { color: var(--muted); font-size: 17px; margin: 0 0 36px; }
@@ -46,7 +46,7 @@
 </head>
 <body>
   <div class="wrap">
-    <div class="dot" aria-hidden="true"></div>
+    <img class="dot" src="./icon.png" alt="Dohiqo" width="96" height="96" />
     <h1>Dohiqo</h1>
     <p class="tag">
       Local-first personal finance tracker for Android and iOS.<br />
