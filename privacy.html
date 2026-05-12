@@ -42,9 +42,9 @@
       border-bottom: 1px solid var(--border);
     }
     .brand .dot {
-      width: 36px; height: 36px; border-radius: 10px;
-      background: linear-gradient(180deg, #5fb2ff, #1f88ff);
+      width: 40px; height: 40px; border-radius: 10px;
       box-shadow: 0 6px 16px rgba(31, 136, 255, .35);
+      object-fit: cover; display: block;
     }
     .brand .title { font-weight: 700; font-size: 18px; }
     .brand .sub { color: var(--muted); font-size: 13px; }
@@ -85,7 +85,7 @@
 <body>
   <div class="wrap">
     <header class="brand">
-      <div class="dot" aria-hidden="true"></div>
+      <img class="dot" src="./icon.png" alt="Dohiqo" width="40" height="40" />
       <div>
         <div class="title">Dohiqo</div>
         <div class="sub">Local-first finance tracker · Локальный учёт финансов</div>
@@ -104,17 +104,24 @@
       <p class="meta">Действует с 12 мая 2026 года.</p>
 
       <div class="callout">
-        <strong>Коротко:</strong> Dohiqo хранит все ваши данные только на вашем устройстве.
-        Приложение не отправляет данные на сервера, не использует аналитику,
-        рекламу или сторонние SDK для трекинга. Учётная запись не требуется.
+        <strong>Коротко:</strong> ваши финансовые данные (операции, счета, фото, геопозиция)
+        хранятся только на вашем устройстве и не отправляются на сервера — у Dohiqo их
+        попросту нет. Учётная запись не требуется. В приложении показывается рекламный
+        баннер от Yandex Mobile Ads; для его работы рекламная сеть получает обезличенные
+        технические данные устройства, описанные в разделе 6.
       </div>
 
-      <h2>1. Какие данные мы собираем</h2>
+      <h2>1. Какие данные собирает Dohiqo</h2>
       <p>
-        <strong>Никакие.</strong> Dohiqo не собирает, не передаёт и не разглашает
-        ваши персональные данные ни нам, ни третьим лицам. Всё, что вы вводите
-        в приложение (операции, счета, категории, теги, фото, геопозиция),
-        хранится только в локальном хранилище приложения на вашем устройстве.
+        <strong>Сам по себе Dohiqo не собирает ваши финансовые и персональные данные.</strong>
+        Всё, что вы вводите в приложение (операции, счета, категории, теги, фото, геопозиция),
+        хранится только в локальном хранилище приложения на вашем устройстве и не передаётся
+        ни нам, ни третьим лицам.
+      </p>
+      <p>
+        Отдельная история — рекламный баннер: для его показа используется сторонний
+        Yandex Mobile Ads SDK, который получает с устройства технические данные. Подробное
+        описание этих данных и цели их использования — в разделе 6.
       </p>
 
       <h2>2. Что хранится на устройстве</h2>
@@ -171,10 +178,30 @@
         и их политики конфиденциальности.
       </p>
 
-      <h2>6. Сторонние сервисы</h2>
+      <h2>6. Реклама и сторонние сервисы</h2>
       <p>
-        Dohiqo не встраивает аналитику, рекламу, краш-репортинг или иные сторонние SDK,
-        которые передают данные по сети.
+        В приложении показывается рекламный баннер, реализованный через
+        <strong>Yandex Mobile Ads SDK</strong>. Для подбора и показа объявлений
+        рекламная сеть Yandex получает с вашего устройства следующие технические данные:
+      </p>
+      <ul>
+        <li>Рекламный идентификатор устройства: Google AAID на Android и IDFA на iOS
+            (IDFA — только если вы явно дали соответствующее разрешение системы;
+            иначе используется обезличенный идентификатор сессии).</li>
+        <li>IP-адрес и регион уровня страны/города.</li>
+        <li>Тип и модель устройства, версия ОС, язык системы.</li>
+        <li>События взаимодействия с рекламой: показы, нажатия.</li>
+      </ul>
+      <p>
+        Эти данные обрабатываются Yandex в соответствии с её собственной политикой
+        конфиденциальности:
+        <a href="https://yandex.ru/legal/confidential/" target="_blank" rel="noopener">yandex.ru/legal/confidential</a>.
+        <strong>Финансовая информация</strong> (операции, счета, фотографии чеков,
+        геопозиция, теги, комментарии) рекламной сети <strong>не передаётся</strong>.
+      </p>
+      <p>
+        Кроме рекламного SDK, в Dohiqo не встроены аналитика, краш-репортинг или иные
+        сторонние SDK, которые передают данные за пределы устройства.
       </p>
 
       <h2>7. Дети</h2>
@@ -204,17 +231,24 @@
       <p class="meta">Effective May 12, 2026.</p>
 
       <div class="callout">
-        <strong>In short:</strong> Dohiqo stores all your data locally on your device only.
-        The app does not send data to any server, does not use analytics, advertising,
-        or third-party tracking SDKs. No account is required.
+        <strong>In short:</strong> your financial data (transactions, accounts, photos,
+        geolocation) is stored only on your device and is never sent to any Dohiqo server —
+        we don't run any. No account is required. The app displays an advertising banner
+        powered by Yandex Mobile Ads; for ad delivery, that network receives anonymized
+        device-level data described in section 6.
       </div>
 
-      <h2>1. Data we collect</h2>
+      <h2>1. Data Dohiqo collects</h2>
       <p>
-        <strong>None.</strong> Dohiqo does not collect, transmit, or share any personal
-        data — neither with us nor with any third party. Everything you enter into the
-        app (transactions, accounts, categories, tags, photos, geolocation) is kept in
-        the app's private storage on your device.
+        <strong>Dohiqo itself does not collect your financial or personal data.</strong>
+        Everything you enter into the app (transactions, accounts, categories, tags,
+        photos, geolocation) is kept in the app's private storage on your device and is
+        not transmitted to us or to any third party.
+      </p>
+      <p>
+        Separately, the advertising banner in the app is served by the third-party
+        Yandex Mobile Ads SDK, which receives technical device data from your device.
+        See section 6 for the exact list of data and the purposes of its use.
       </p>
 
       <h2>2. What is stored on your device</h2>
@@ -271,10 +305,30 @@
         under their own privacy policies.
       </p>
 
-      <h2>6. Third parties</h2>
+      <h2>6. Advertising and third parties</h2>
       <p>
-        Dohiqo does not embed analytics, advertising, crash reporting, or any other
-        third-party SDK that transmits data over the network.
+        The app displays an advertising banner served by the
+        <strong>Yandex Mobile Ads SDK</strong>. To select and deliver ads, the Yandex
+        ad network receives the following technical data from your device:
+      </p>
+      <ul>
+        <li>Device advertising identifier: Google AAID on Android, IDFA on iOS
+            (IDFA is shared only if you have explicitly granted the system tracking
+            permission; otherwise an anonymized session identifier is used).</li>
+        <li>IP address and approximate region (country / city).</li>
+        <li>Device type and model, OS version, system language.</li>
+        <li>Ad interaction events: impressions and clicks.</li>
+      </ul>
+      <p>
+        This data is processed by Yandex under its own privacy policy:
+        <a href="https://yandex.com/legal/confidential/" target="_blank" rel="noopener">yandex.com/legal/confidential</a>.
+        Your <strong>financial information</strong> (transactions, accounts, receipt
+        photos, geolocation, tags, notes) is <strong>not</strong> shared with the ad
+        network.
+      </p>
+      <p>
+        Apart from the ad SDK, Dohiqo does not embed analytics, crash reporting, or
+        any other third-party SDK that transmits data off the device.
       </p>
 
       <h2>7. Children</h2>
